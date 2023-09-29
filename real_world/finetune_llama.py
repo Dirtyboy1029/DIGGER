@@ -57,7 +57,8 @@ def train(source_data_path, model_name,
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-version', "-v", type=str, default="7b",)
+    parser.add_argument('-version', "-v", type=str, default="30b",
+                        choices=['7b', '13b', '30b', '65b'])
     parser.add_argument('-times', "-ts", type=int, default=1)
     args = parser.parse_args()
     times = args.times
@@ -66,7 +67,7 @@ if __name__ == '__main__':
     # device = torch.device('cuda:0')
 
     config = configparser.RawConfigParser()
-    config.read("../config")
+    config.read("config")
     overwrite_output_dir = False
     per_device_train_batch_size = int(config.get("environment", "per_device_train_batch_size"))
     num_train_epochs = int(config.get("environment", "num_train_epochs"))
