@@ -1,0 +1,14 @@
+[environment]
+block_size = 128
+per_device_train_batch_size = 1
+num_train_epochs = 1
+save_steps = 30000
+times = 1
+
+[analysis]
+times_set = 3
+max_length_num = 6
+
+[config]
+samples_num = 100
+test_size=0.3
