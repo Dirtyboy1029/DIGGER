@@ -11,9 +11,12 @@ We develop the codes on Windows operation system, and run the codes on Ubuntu 20
 #### 1. Data processing
 Put the book in txt format into the specified directory, cut out n paragraphs, the length of each paragraph is l.
 
+      cd Datasets
       python build_samples_set.py
      
+The sample set is then randomly sliced proportionally and book lists are constructed for each dataset.
 
+      python build_dataset.py
 
 #### 2. Calculation of uncertainty metrics
 
