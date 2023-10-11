@@ -20,11 +20,16 @@ The sample set is then randomly sliced proportionally and book lists are constru
 
 #### 2. Fine-tune LLM & get loss
 
+
+      cd Digger
       python finetune.py
       Parameter model_type: 
            benchmark:  for Reference LLM
            test: for vanilla-tuned
            union: for Reference-tuned
+      python get_loss.py
+
+All loss values are saved in batches as npy files and stored in the outputs directory
 
       
 
