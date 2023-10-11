@@ -8,14 +8,10 @@ In this work, we introduce a universal optimization framework, denoted as Digger
 We develop the codes on Windows operation system, and run the codes on Ubuntu 20.04. The codes depend on Python 3.10.9. Other packages (e.g., transformers) can be found in the `./requirements.txt`.
 
 ##  Usage
-#### 1. train base model and uncertainty estimation models
-for example: 
-     train deepdrebin base model: /myexperiment/train_uncertainity_model/Vanilla.py
-
-     python Vanilla.py -train_type drebin -model_type small   ## The parameter "small" indicates that the base model is trained with a small training set. 
-
-     python Bayesian.py -train_type drebin -model_type small ##train bayesian DNN model to estimation uncertainty
-The other models are trained in a similar way.
+#### 1. Data processing
+Put the book in txt format into the specified directory, cut out n paragraphs, the length of each paragraph is l.
+      python build_samples_set.py
+     
 
 
 #### 2. Calculation of uncertainty metrics
