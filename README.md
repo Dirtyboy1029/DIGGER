@@ -30,23 +30,3 @@ The sample set is then randomly sliced proportionally and book lists are constru
       python get_loss.py
 
 All loss values are saved in batches as npy files and stored in the outputs directory
-
-      
-
-#### 3. train correction model and correction
-
-train：myexperiment/uncertainity_metrics_utils/ml_true_flase.py
-
-      python ml_true_flase.py -experiment_type train -save_model y -data_type small_drebin -banlance n -train_data_size 1.0
-      
-      ###  experiment_type: Type of experiment,training correction model or resultant correction.
-      ###  save_model: Whether to save trained correction models
-      ###  data_type: Data types for training corrective models，(small_drebin,small_multi)
-      ###  train_data_size: The effect of the scale of the training data on the corrective model,[1.0,0.8,0.4,0.2,0.1]
-      ###  banlance: The effect of whether the training data is balanced or not on the corrective model
-
-correction： myexperiment/uncertainity_metrics_utils/ml_true_flase.py
-
-      python ml_true_flase.py -experiment_type test -data_type small_amd -banlance n -train_data_size 1.0 -test_model_type small_drebin
-
-      ###  Show the results of training the correction model using the uncertainty metrics of the drebin dataset obtained from deepdrebin's model, using the unbalanced full set of data, and correct the AMD dataset.
