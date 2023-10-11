@@ -18,13 +18,15 @@ The sample set is then randomly sliced proportionally and book lists are constru
 
       python build_dataset.py
 
-#### 2. Calculation of uncertainty metrics
+#### 2. Fine-tune LLM & get loss
 
-get uncertainty metrics: myexperiment/uncertainity_metrics_utils/main_uc_metrics.py
+      python finetune.py
+      Parameter model_type: 
+           benchmark:  for Reference LLM
+           test: for vanilla-tuned
+           union: for Reference-tuned
 
-     python main_uc_metrics.py -model_arch drebin -model_type small -data_type ood
-
-Get all the metrics and save them separately as csv files
+      
 
 #### 3. train correction model and correction
 
