@@ -10,6 +10,7 @@ We develop the codes on Windows operation system, and run the codes on Ubuntu 20
 ##  Usage
 #### 1. Data processing
 Put the book in txt format into the specified directory, cut out n paragraphs, the length of each paragraph is l.
+
       python build_samples_set.py
      
 
